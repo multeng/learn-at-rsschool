@@ -1,0 +1,26 @@
+{
+  "name": "english-for-kids",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack --watch",
+    "style": "sass sass/style.scss sass/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/multeng/english-for-kids.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/multeng/english-for-kids/issues"
+  },
+  "homepage": "https://github.com/multeng/english-for-kids#readme",
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
