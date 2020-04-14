@@ -4,7 +4,7 @@
   display: inline-block;
   background: $color-hamburger;
   border-radius: 5px;
-  height: 3px;
+  height: 4px;
   width: 100%;
 }
 
@@ -27,5 +27,5 @@
 
 .hamburger__line {
   @extend %hamburger__line;
-  top: calc(50% - 1.5px);
+  top: calc(50% - 2px);
 }

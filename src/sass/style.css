@@ -1,0 +1,134 @@
+html {
+  font-size: 10px;
+}
+
+.app-container {
+  max-height: 100vh;
+}
+
+.hamburger__line, .hamburger::after, .hamburger::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  background: #cdcdcd;
+  border-radius: 5px;
+  height: 4px;
+  width: 100%;
+}
+
+.hamburger {
+  position: relative;
+  display: inline-block;
+  width: 33px;
+  height: 27px;
+}
+.hamburger::before {
+  top: 0;
+  left: 0;
+}
+.hamburger::after {
+  bottom: 0;
+  left: 0;
+}
+
+.hamburger__line {
+  top: calc(50% - 2px);
+}
+
+.onoffswitch {
+  position: relative;
+  width: 96px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+  display: none;
+}
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #E3E3E3;
+  border-radius: 36px;
+}
+
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 36px;
+  padding: 0;
+  line-height: 36px;
+  font-size: 16px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+  content: "Play";
+  padding-left: 10px;
+  background-color: #459C43;
+  color: #FFFFFF;
+}
+
+.onoffswitch-inner:after {
+  content: "Train";
+  padding-right: 10px;
+  background-color: #4BC4CF;
+  color: #666666;
+  text-align: right;
+}
+
+.onoffswitch-switch {
+  display: block;
+  width: 26px;
+  margin: 5px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 56px;
+  border: 2px solid #E3E3E3;
+  border-radius: 36px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1350px;
+  margin: 40px auto 0;
+  height: 45px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: absolute;
+  width: 380px;
+  left: -500;
+}
+
+/*# sourceMappingURL=style.css.map */
