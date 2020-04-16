@@ -1,6 +1,4 @@
-const cards = ['Action (set A)', 'Action (set B)', 'Animal (set A)', 'Animal (set B)', 'Clothes', 'Emotions'];
-
-const cardsProperty = [[
+export default [[
   {
     word: 'cry',
     translation: 'плакать',
@@ -300,9 +298,3 @@ const cardsProperty = [[
     audioSrc: 'audio/laugh.mp3'
   }
 ]]
-
-
-
-
-
-export default cards;
