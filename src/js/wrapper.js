@@ -1,13 +1,16 @@
 
 function makeWrapperMainCard(image, cardName) {
     let wrapper = document.createElement('div');
-    wrapper.innerHTML += `<a href="#/cards" class="main-card"> <img src="${image}" class="main-card__image" alt="${cardName}"> ${cardName}</a>`;
+    wrapper.classList.add('main-card');
+    wrapper.setAttribute('data-name', cardName);
+    wrapper.innerHTML += `<a href="#/cards" class="main-card__link"> <img src="${image}" class="main-card__image" alt="${cardName}"> ${cardName}</a>`;
     return wrapper;
 }
 
-function makeWrapperCard(image, cardName, tranlateName) {
+function makeWrapperCardTrain(image, cardName, tranlateName) {
     let wrapper = document.createElement('div');
     wrapper.classList.add('card');
+    wrapper.setAttribute('data-type', 'TrainCard')
     wrapper.innerHTML += `
         <div class="front">
             <img class="card-img" src="${image}" alt="${cardName}">
@@ -21,5 +24,16 @@ function makeWrapperCard(image, cardName, tranlateName) {
     `;
     return wrapper;
 }
+function makeWrapperCardPlay(image) {
+    let wrapper = document.createElement('div');
+    wrapper.classList.add('card');
+    wrapper.setAttribute('data-type', 'PlayCard')
+    wrapper.innerHTML += `
+        <div class="front">
+            <img class="card-img" src="${image}" alt="">
+        </div>
+    `;
+    return wrapper;
+}
 
-export {makeWrapperMainCard, makeWrapperCard};
+export { makeWrapperMainCard, makeWrapperCardTrain, makeWrapperCardPlay };
