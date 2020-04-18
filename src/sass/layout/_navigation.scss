@@ -1,8 +1,30 @@
 .menu {
   display: flex;
   flex-direction: column;
+  text-align: center;
   box-sizing: border-box;
   position: absolute;
+  padding-top: 200px;
   width: 380px;
+  height: 100vh;
   left: -500;
+  top: 0;
+  background: linear-gradient(180deg, #787e26, #6db60e);
+  transition: left 0.4s ease-in-out, opacity 0.33s ease-in-out;
+  z-index: 1;
+}
+.menu-active {
+  top: 0;
+  left: 0;
+  transition: left 0.4s ease-in-out, opacity 0.33s ease-in-out;
+}
+.menu-item {
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+.menu-red {
+  background: linear-gradient(180deg, #787e26, red);
 }

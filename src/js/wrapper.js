@@ -7,33 +7,51 @@ function makeWrapperMainCard(image, cardName) {
     return wrapper;
 }
 
-function makeWrapperCardTrain(image, cardName, tranlateName) {
+function makeWrapperCardTrain(id, image, cardName, tranlateName) {
     let wrapper = document.createElement('div');
     wrapper.classList.add('card');
     wrapper.setAttribute('data-type', 'TrainCard')
+    wrapper.id = id;
     wrapper.innerHTML += `
-        <div class="front">
+        <div class="front" data-type="TrainCard">
             <img class="card-img" src="${image}" alt="${cardName}">
             <p class="card-name">${cardName}</p>
         </div>
-        <div class="back">
+        <div class="back" data-type="TrainCard">
             <img class="card-img" src="${image}" alt="${tranlateName}">
             <p class="card-name">${tranlateName}</p>
+        </div>
+        <div class="rotate rotate-img"></div>
+    `;
+    return wrapper;
+}
+
+function makeWrapperCardPlay(id, image, cardName, tranlateName) {
+    let wrapper = document.createElement('div');
+    wrapper.classList.add('card');
+    wrapper.setAttribute('data-type', 'TrainCard')
+    wrapper.id = id;
+    wrapper.innerHTML += `
+        <div class="front" data-type="TrainCard">
+            <img class="card-img card-img__full" src="${image}" alt="${cardName}">
+            <p class="card-name card-name-off">${cardName}</p>
+        </div>
+        <div class="back" data-type="TrainCard">
+            <img class="card-img card-img__full" src="${image}" alt="${tranlateName}">
+            <p class="card-name card-name-off">${tranlateName}</p>
         </div>
         <div class="rotate"></div>
     `;
     return wrapper;
 }
-function makeWrapperCardPlay(image) {
-    let wrapper = document.createElement('div');
-    wrapper.classList.add('card');
-    wrapper.setAttribute('data-type', 'PlayCard')
-    wrapper.innerHTML += `
-        <div class="front">
-            <img class="card-img" src="${image}" alt="">
-        </div>
-    `;
-    return wrapper;
-}
+function makeButton() {
+    const appContainer = document.querySelector('.app-container');
+    const container = document.createElement('div');
+    const button = document.createElement('button');
+    container.classList.add('button-container');
+    button.classList.add('button');
+    container.appendChild(button);
+    appContainer.appendChild(container);
 
-export { makeWrapperMainCard, makeWrapperCardTrain, makeWrapperCardPlay };
+}
+export { makeWrapperMainCard, makeWrapperCardTrain, makeWrapperCardPlay, makeButton };

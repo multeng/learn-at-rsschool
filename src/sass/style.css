@@ -6,7 +6,7 @@ html {
   max-height: 100vh;
 }
 
-.hamburger__line, .hamburger::after, .hamburger::before {
+.hamburger-active::after, .hamburger-active::before, .hamburger__line, .hamburger::after, .hamburger::before {
   content: "";
   position: absolute;
   display: inline-block;
@@ -17,22 +17,51 @@ html {
 }
 
 .hamburger {
+  z-index: 2;
   position: relative;
   display: inline-block;
   width: 33px;
   height: 27px;
+  cursor: pointer;
 }
 .hamburger::before {
+  transition: transform 0.27s ease-in-out;
   top: 0;
   left: 0;
 }
 .hamburger::after {
+  transition: transform 0.27s ease-in-out;
   bottom: 0;
   left: 0;
 }
 
 .hamburger__line {
   top: calc(50% - 2px);
+  transition: transform 0.27s ease-in-out;
+}
+
+.hamburger-active {
+  position: relative;
+  display: inline-block;
+  width: 33px;
+  height: 27px;
+}
+.hamburger-active::before {
+  transform: rotate(45deg) translate(6px, 11px);
+  transition: transform 0.27s ease-in-out;
+  top: 0;
+  left: 0;
+}
+.hamburger-active::after {
+  transform: rotate(-45deg) translate(5px, -10px);
+  transition: transform 0.27s ease-in-out;
+  bottom: 0;
+  left: 0;
+}
+
+.hamburger__line-active {
+  transition: transform 0.27s ease-in-out;
+  display: none;
 }
 
 .onoffswitch {
@@ -143,6 +172,10 @@ html {
   margin: 30px auto;
 }
 
+.main-card__link-red {
+  background: linear-gradient(180deg, #787e26, red 40%, #fff 0, #fff);
+}
+
 .card {
   margin: 20px;
   position: relative;
@@ -183,7 +216,11 @@ html {
   text-align: center;
 }
 
-.rotate {
+.card-name-off {
+  display: none;
+}
+
+.rotate-img {
   width: 50px;
   height: 50px;
   position: absolute;
@@ -206,10 +243,35 @@ html {
 .menu {
   display: flex;
   flex-direction: column;
+  text-align: center;
   box-sizing: border-box;
   position: absolute;
+  padding-top: 200px;
   width: 380px;
+  height: 100vh;
   left: -500;
+  top: 0;
+  background: linear-gradient(180deg, #787e26, #6db60e);
+  transition: left 0.4s ease-in-out, opacity 0.33s ease-in-out;
+  z-index: 1;
+}
+
+.menu-active {
+  top: 0;
+  left: 0;
+  transition: left 0.4s ease-in-out, opacity 0.33s ease-in-out;
+}
+
+.menu-item {
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.menu-red {
+  background: linear-gradient(180deg, #787e26, red);
 }
 
 .main-container {

@@ -1,6 +1,7 @@
 .main-card {
   margin-top: 40px;
 }
+
 .main-card__link {
   display: flex;
   flex-direction: column;
@@ -15,8 +16,9 @@
   color: black;
   font-size: 2rem;
   cursor: pointer;
-  background: linear-gradient(180deg,#787e26,#6db60e 40%,#fff 0,#fff);
+  background: linear-gradient(180deg, #787e26, #6db60e 40%, #fff 0, #fff);
 }
+
 .main-card__image {
   width: 140px;
   height: 140px;
@@ -24,4 +26,8 @@
   border: 10px solid #fff;
   object-fit: cover;
   margin: 30px auto;
+}
+
+.main-card__link-red {
+  background: linear-gradient(180deg, #787e26, red 40%, #fff 0, #fff);
 }
