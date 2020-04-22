@@ -1,0 +1,22 @@
+.button-container {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+.repeat {
+  transition: .3s;
+}
+.hide {
+  display: none;
+}
+.button {
+  background-color: $color-green;
+  width: 300;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .3s;
+  @media only screen and (max-width: 400px){
+    width: 250px;
+  }
+}

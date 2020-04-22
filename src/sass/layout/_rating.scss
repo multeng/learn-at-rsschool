@@ -1,0 +1,9 @@
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    max-width: 1440px;
+    height: 64px;
+    margin: 0 auto;
+    overflow:hidden;
+}

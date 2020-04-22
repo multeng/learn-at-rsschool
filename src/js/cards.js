@@ -346,5 +346,121 @@ export default {
       image: './src/img/laugh.jpg',
       audioSrc: './src/audio/laugh.mp3'
     }
+  ],
+  'Sport': [
+    {
+      id: 1,
+      word: 'basketball',
+      translation: 'баскетбол',
+      image: './src/img/basketball.jpg',
+      audioSrc: './src/audio/basketball.mp3'
+    },
+    {
+      id: 2,
+      word: 'biathlon',
+      translation: 'биатлон',
+      image: './src/img/biathlon.jpg',
+      audioSrc: './src/audio/biathlon.mp3'
+    },
+    {
+      id: 3,
+      word: 'boxing',
+      translation: 'бокс',
+      image: './src/img/boxing.jpg',
+      audioSrc: './src/audio/boxing.mp3'
+    },
+    {
+      id: 4,
+      word: 'football',
+      translation: 'футбол',
+      image: './src/img/football.jpg',
+      audioSrc: './src/audio/football.mp3'
+    },
+    {
+      id: 5,
+      word: 'golf',
+      translation: 'гольф',
+      image: './src/img/golf.jpg',
+      audioSrc: './src/audio/golf.mp3'
+    },
+    {
+      id: 6,
+      word: 'hockey',
+      translation: 'хоккей',
+      image: './src/img/hockey.jpg',
+      audioSrc: './src/audio/hockey.mp3'
+    },
+    {
+      id: 7,
+      word: 'running',
+      translation: 'бег',
+      image: './src/img/run.jpg',
+      audioSrc: './src/audio/running.mp3'
+    },
+    {
+      id: 8,
+      word: 'swimming',
+      translation: 'плаванье',
+      image: './src/img/swim.jpg',
+      audioSrc: './src/audio/swimming.mp3'
+    }
+  ],
+  'Food': [
+    {
+      id: 1,
+      word: 'pasta',
+      translation: 'макароны',
+      image: './src/img/pasta.jpg',
+      audioSrc: './src/audio/pasta.mp3'
+    },
+    {
+      id: 2,
+      word: 'chips',
+      translation: 'чипсы',
+      image: './src/img/chips.jpg',
+      audioSrc: './src/audio/chips.mp3'
+    },
+    {
+      id: 3,
+      word: 'apple',
+      translation: 'яблоко',
+      image: './src/img/apple.jpg',
+      audioSrc: './src/audio/apple.mp3'
+    },
+    {
+      id: 4,
+      word: 'banana',
+      translation: 'банан',
+      image: './src/img/banana.jpg',
+      audioSrc: './src/audio/banana.mp3'
+    },
+    {
+      id: 5,
+      word: 'bread',
+      translation: 'хлеб',
+      image: './src/img/bread.jpg',
+      audioSrc: './src/audio/bread.mp3'
+    },
+    {
+      id: 6,
+      word: 'pie',
+      translation: 'пирог',
+      image: './src/img/pie.png',
+      audioSrc: './src/audio/pie.mp3'
+    },
+    {
+      id: 7,
+      word: 'sandwich',
+      translation: 'бутерброд',
+      image: './src/img/sandwich.jpg',
+      audioSrc: './src/audio/sandwich.mp3'
+    },
+    {
+      id: 8,
+      word: 'pizza',
+      translation: 'пицца',
+      image: './src/img/pizza.jpg',
+      audioSrc: './src/audio/pizza.mp3'
+    }
   ]
 }

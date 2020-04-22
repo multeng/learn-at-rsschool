@@ -1,0 +1,13 @@
+.result-page {
+  text-align: center;
+}
+.error {
+  font-size: 4rem;
+  color: red;
+  margin-top: 60px;
+}
+@media only screen and (max-width: 500px) {
+  .result-page__img {
+    width: 100%;
+  }
+}

@@ -12,6 +12,9 @@
   background: linear-gradient(180deg, #787e26, #6db60e);
   transition: left 0.4s ease-in-out, opacity 0.33s ease-in-out;
   z-index: 1;
+  @media only screen and (max-width: 730px) {
+    width: 300px;
+  }
 }
 .menu-active {
   top: 0;

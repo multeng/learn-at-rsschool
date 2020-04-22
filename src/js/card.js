@@ -1,4 +1,4 @@
-import { makeWrapperCardTrain, makeWrapperMainCard, makeWrapperCardPlay, makeButton } from './wrapper.js';
+import { makeWrapperMainGreenCard, makeWrapperMainRedCard, makeWrapperCardTrain, makeWrapperCardPlay } from './wrapper.js';
 
 class Card {
     constructor({ id, word, translation, image, audioSrc }) {
@@ -18,6 +18,9 @@ class Card {
     getAudio() {
         return this.audioSrc;
     }
+    getId() {
+        return this.id;
+    }
 
 }
 class mainCard {
@@ -26,9 +29,14 @@ class mainCard {
         this.name = name;
     }
 
-    makeMainCard() {
-        return makeWrapperMainCard(this.image, this.name);
+    makeMainGreenCard() {
+        return makeWrapperMainGreenCard(this.image, this.name);
+    }
+    makeMainRedCard() {
+        return makeWrapperMainRedCard(this.image, this.name);
     }
 }
+
+
 
 export { Card, mainCard };
