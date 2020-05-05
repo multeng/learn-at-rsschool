@@ -1,35 +1,70 @@
-const path = require('path');
-const miniCss = require('mini-css-extract-plugin');
+const path = require('path')
+const HTMLWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+
 module.exports = {
-    entry: './src/js/app.js',
+    context: path.resolve(__dirname, 'src'),
+    mode: 'development',
+    entry: {
+        main: ['@babel/polyfill', './index.js']
+    },
     output: {
-        filename: 'index.js',
+        filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist')
     },
-    module: {
-        rules: [{
-            test: /\.(s*)css$/,
-            use: [
-                miniCss.loader,
-                'css-loader',
-                'sass-loader',
-            ]
-        }, {
-            test: /\.m?js$/,
-            exclude: /(node_modules|bower_components)/,
-            use: {
-                loader: 'babel-loader',
-                options: {
-                    presets: ['@babel/preset-env'],
-                    plugins: ['@babel/plugin-proposal-object-rest-spread']
-                }
-            }
-        }]
+    devServer: {
+        port: 5000
     },
     plugins: [
-        new miniCss({
-            filename: 'style.css',
+        new HTMLWebpackPlugin({
+            template: './index.html'
         }),
+        new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin({
+            filename: '[name].[contenthash].css'
+        })
     ],
-    devtool: "source-map"
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader']
+            },
+            {
+                test: /\.s[ac]ss$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.(ttf|woff|woff2|eot)$/,
+                use: ['file-loader']
+            },
+            {
+                test: /\.(png|jpg|svg|gif)$/,
+                use: ['file-loader']
+            },
+            {
+                enforce: 'pre',
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'eslint-loader',
+                options: {
+                    failOnError: true,
+                },
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            '@babel/preset-env'
+                        ]
+                    }
+                }
+            }
+        ]
+    }
 };

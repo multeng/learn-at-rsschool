@@ -1,4 +1,13 @@
-console.log('webpack ready');
-console.log('something else');
-let a = 200;
-console.log(`${a}`);
+export default class Test {
+    constructor(title) {
+        this.title = title
+        this.date = new Date()
+    }
+
+    toString() {
+        return JSON.stringify({
+            title: this.title,
+            date: this.date,
+        })
+    }
+}

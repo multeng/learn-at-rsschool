@@ -6,6 +6,7 @@ module.exports = {
     "extends": [
         "airbnb-base"
     ],
+    "parser": "babel-eslint",
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -15,5 +16,16 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
+    },
+    "import/no-extraneous-dependencies": [
+        "error", {
+            "devDependencies": false,
+            "optionalDependencies": false,
+            "peerDependencies": false,
+            "packageDir": "./"
+        }
+    ],
+    "settings": {
+        "import/resolver": "webpack"
     }
 };
