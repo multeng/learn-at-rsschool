@@ -1,0 +1,25 @@
+.search{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.search__form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+}
+.search__input {
+    border: 1px black solid;
+    border-radius: 5px;
+    height: 28px;
+    font-size: 1.1rem;
+    width: 85%;
+}
+.search__button {
+    width: 150px;
+    margin-left: 23px;
+    border: 1px yellow solid;
+    border-radius: 5px;
+    background: yellow;
+}
