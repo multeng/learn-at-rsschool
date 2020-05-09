@@ -1,9 +1,12 @@
 @import "~normalize.css";
 @import "fonts.css";
+// @import "./swiper/swiper.css";
+@import "./swiper/swiper.min.css";
 //base
 @import "./base/base";
 //layout
 @import "./layout/header";
 @import "./layout/search";
 @import "./layout/footer";
+@import "./layout/swiper";
 

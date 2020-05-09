@@ -8,7 +8,8 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: {
-        main: ['@babel/polyfill', './index.js']
+        main: ['@babel/polyfill', './index.js'],
+        swiper: ['@babel/polyfill', './js/swiper/swiper.min.js']
     },
     output: {
         filename: '[name].[contenthash].js',

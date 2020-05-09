@@ -1,6 +1,6 @@
 export default function makeFilmPage(imgUrl, filmTitle, rating) {
     const wrapper = document.createElement('div');
-    wrapper.classList.add('film-page');
+    wrapper.classList.add('swiper-slide');
     wrapper.innerHTML +=`
         <div class="poster">
             <img src="${imgUrl}" alt="${filmTitle}" srcset="">

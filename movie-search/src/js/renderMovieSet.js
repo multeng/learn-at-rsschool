@@ -1,4 +1,4 @@
 export default function renderMovieSet(moviePage) {
-    const slider = document.querySelector('.slider');
-    slider.appendChild(moviePage);
+    const swiper = document.querySelector('.swiper-wrapper');
+    swiper.appendChild(moviePage);
 }
