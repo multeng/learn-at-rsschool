@@ -23,3 +23,18 @@
     border-radius: 5px;
     background: yellow;
 }
+.search__clear-button {
+    border: 1px orange solid;
+    border-radius: 5px;
+    background: orange;
+    margin-left: 20px;
+}
+.search-status {
+    height: 40px;
+}
+.search-status__content {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}

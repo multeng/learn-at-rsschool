@@ -1,6 +1,11 @@
 .swiper-container {
-    box-sizing: border-box;
-    max-width: 1440px;
-    height: 600px;
-    padding: 0px 25px 0px 40px;
+  box-sizing: border-box;
+  max-width: 1440px;
+  height: 620px;
+  padding: 0px 25px 0px 40px;
+  margin-top: 30px;
+  @media only screen and (max-width: 340px) {
+    width: 300px;
+    padding: 0px;
+  }
 }

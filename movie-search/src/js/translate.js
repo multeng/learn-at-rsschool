@@ -3,7 +3,5 @@ export default async function translate(string) {
 
     return fetch(url)
         .then(res => res.json())
-        .then(data => {
-            console.log(data)
-        });
+        .then(data => data.text.toString());
 }

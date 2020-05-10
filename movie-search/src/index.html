@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MovieSearch</title>
 </head>
 
 <body>
@@ -14,34 +14,24 @@
         <div class="main">
             <div class="search">
                 <form action="" class="search__form">
-                    <input type="text" class="search__input">
-                    <input type="button" class="search__button" value="Search">
+                    <input type="text" class="search__input" autocomplete="off" placeholder="Search..." autofocus>
+                    <input type="reset" class="search__clear-button" value="X">
+                    <input type="submit" class="search__button" value="Search" autofocus>
                 </form>
+                <div class="search-status">
+                    <p class="search-status__content"></p>
+                </div>
             </div>
-            <!-- Slider main container -->
             <div class="swiper-container">
-                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                    <!-- Slides -->
 
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
         </div>
         <div class="footer">
-            <div class="rs-school">
-
-                <img src="" alt="">
-            </div>
-            <div class="github">
-
-                <img src="" alt="">
-            </div>
+            <p class="footer__content">RS School 2020q1</p>
         </div>
     </div>
 </body>
