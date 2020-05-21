@@ -1,8 +1,19 @@
 @import '../../node_modules/reveal.js/css/reveal.css';
-@import '../../node_modules/reveal.js/css/theme/moon.css';
+@import '../../node_modules/reveal.js/css/theme/night.css';
 
 .title {
   color: #fff;
   top: 150px;
   position: relative;
+}
+.qml > * {
+  font-size: 1rem;
+}
+.qml {
+  font-size: 1rem;
+  background-color: #403d3d;
+}
+.code {
+  font-size: 1rem;
+  background-color: #403d3d;
 }
