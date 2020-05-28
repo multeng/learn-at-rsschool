@@ -53,6 +53,6 @@ module.exports = {
             template: './index.html'
         }),
         new CleanWebpackPlugin(),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin(),
     ]
 };

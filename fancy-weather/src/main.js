@@ -1,6 +1,7 @@
 import './styles/main.scss';
+import App from './assets/js/controllers/App';
 
-let add = (a, b) => {
-    return a + b;
-}
-console.log(add(2, 3));
+
+const geoToken = '9dcc2819d465e5';
+const app = new App(geoToken);
+app.start();
