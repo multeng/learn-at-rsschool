@@ -1,5 +1,4 @@
 import AppModel from '../models/AppModel';
-// eslint-disable-next-line no-unused-vars
 import AppView from '../views/AppView';
 
 
@@ -31,6 +30,7 @@ export default class App {
         console.log(image);
         console.log(coordinates);
 
-
+        const view = new AppView(city, weather, image, coordinates);
+        view.renderOnLoad();
     }
 }

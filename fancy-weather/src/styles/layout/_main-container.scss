@@ -1,0 +1,23 @@
+.main-container {
+  max-width: 1440px;
+  display: flex;
+  margin: auto;
+  height: 85vh;
+}
+.weather-container {
+  width: 100%;
+  max-width: 60%;
+  background-color: khaki;
+  height: 85vh;
+  font-size: 3rem;
+}
+.map-container {
+  display: flex;
+  width: 100%;
+  max-width: 40%;
+  background-color: lightslategrey;
+  height: 85vh;
+}
+.weather-in-future {
+  display: flex;
+}

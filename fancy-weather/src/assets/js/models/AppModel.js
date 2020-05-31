@@ -19,7 +19,7 @@ export default class AppModel {
         url = url.replace(/city/, currentCity);
         return fetch(url)
             .then(res => res.json())
-            .then(res => res);
+            .then(res => res.current);
     }
 
     async getImage() {
