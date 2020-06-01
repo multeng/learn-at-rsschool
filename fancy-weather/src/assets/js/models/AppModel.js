@@ -11,15 +11,25 @@ export default class AppModel {
 
         return fetch(url)
             .then(res => res.json())
-            .then(res => res.city.replace(/'/, ''));
+            .then(res => res.city);
     }
 
-    async getWeather(currentCity) {
-        let { url } = this.weatherApi;
+    async getCoordinates(currentCity) {
+        let { url } = this.coordinatesApi;
         url = url.replace(/city/, currentCity);
         return fetch(url)
             .then(res => res.json())
-            .then(res => res.current);
+            .then(res => res.results[0].geometry);
+    }
+
+    async getWeather(coordinates) {
+        const { lat, lng } = coordinates;
+        let { url } = this.weatherApi;
+        url = url.replace(/latitude/, lat);
+        url = url.replace(/longitude/, lng);
+        return fetch(url)
+            .then(res => res.json())
+            .then(res => res);
     }
 
     async getImage() {
@@ -30,11 +40,4 @@ export default class AppModel {
             .then(res => res.links.download);
     }
 
-    async getCoordinates(currentCity) {
-        let { url } = this.coordinatesApi;
-        url = url.replace(/city/, currentCity);
-        return fetch(url)
-            .then(res => res.json())
-            .then(res => res.results[0].geometry);
-    }
 }
