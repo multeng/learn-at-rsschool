@@ -5,11 +5,11 @@
   height: 85vh;
 }
 .weather-container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 60%;
-  background-color: khaki;
-  height: 85vh;
-  font-size: 3rem;
+  font-size: 1rem;
 }
 .map-container {
   display: flex;
@@ -18,6 +18,69 @@
   background-color: lightslategrey;
   height: 85vh;
 }
+.weather-today {
+  display: grid;
+}
+
 .weather-in-future {
   display: flex;
+}
+.weather-today__city,
+.weather-today__data,
+.weather-today__info {
+  font-size: 2rem;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+.weather-today__info {
+  display: grid;
+  align-items: center;
+  grid-template-areas:
+    "temp icon"
+    "temp info";
+  grid-template-columns: 2fr 1fr;
+  justify-items: center;
+  text-transform: uppercase;
+}
+
+.weather-today__temperature {
+  font-weight: 400;
+  font-size: 9em;
+  grid-area: temp;
+}
+.weather-today__icon {
+  width: 80%;
+  grid-area: icon;
+}
+.weather-today__additional-info {
+  font-size: 1.5rem;
+  grid-area: info;
+}
+
+.weather-in-future {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.day-block {
+  display: flex;
+  flex-wrap: wrap;
+  width: 33%;
+  font-size: 1.2em;
+  color: #fff;
+  text-transform: uppercase;
+}
+.day {
+  width: 100%;
+  align-self: center;
+  text-align: center;
+}
+.day-temperature {
+  font-size: 3rem;
 }

@@ -1,54 +1,70 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css' rel='stylesheet' />
     <title>Fancy-weather</title>
 </head>
+
 <body>
     <div class="root">
         <div class="header">
             <div class="settings">
 
             </div>
-            <div class="search">
-                <input type="text" name="">
-                <input type="button" value="Search">
+            <div class="search-block">
+                <input class="search-input" type="text" placeholder="Search city">
+                <input type="button" class="search-button" value="Search">
             </div>
         </div>
         <div class="main-container">
             <div class="weather-container">
-                <div class="weather-today">
+                <div class="weather-today-block">
                     <div class="weather-today__city">
-
+                        KHOTKOVO, RUSSIA
                     </div>
-                    <div class="weather-today__date">
-                        <p class="date"></p>
-                        <p class="time"></p>
+                    <div class="weather-today__data">
+                        1 JUNE
                     </div>
                     <div class="weather-today__info">
-                        <div class="temperature">
-
+                        <div class="weather-today__temperature">
+                            11°
                         </div>
-                        <div class="additional-info">
-                            <div class="weather-img">
-
-                            </div>
-                            <p class="precipitation"></p>
-                            <p class="feel"></p>
-                            <p class="wind"></p>
-                            <p class="humidity"></p>
+                        <img src="https://www.weatherbit.io/static/img/icons/c04d.png" class="weather-today__icon"
+                            alt="iconWeatherToday">
+                        <div class="weather-today__additional-info">
+                            <p class="temperature-property">OVERCAST</p>
+                            <p class="temperature-property">FEELS LIKE: +12°</p>
+                            <p class="temperature-property">WIND: 6 M/S</p>
+                            <p class="temperature-property">HUMIDITY: 66%</p>
                         </div>
                     </div>
                 </div>
                 <div class="weather-in-future">
-                    <div class="weather-in-future__one">
-
+                    <div class="day-block">
+                        <div class="day">Thuesday</div>
+                        <div class="day-temperature">
+                            11°
+                        </div>
+                        <img src="https://www.weatherbit.io/static/img/icons/c04d.png" alt="weather-icon__future"
+                            alt="iconWeather">
                     </div>
-                    <div class="weather-in-future__two">
-
+                    <div class="day-block">
+                        <div class="day">Thuesday</div>
+                        <div class="day-temperature">
+                            11°
+                        </div>
+                        <img src="https://www.weatherbit.io/static/img/icons/c04d.png" alt="weather-icon__future"
+                            alt="iconWeather">
                     </div>
-                    <div class="weather-in-future__three">
-
+                    <div class="day-block">
+                        <div class="day">Thuesday</div>
+                        <div class="day-temperature">
+                            11°
+                        </div>
+                        <img src="https://www.weatherbit.io/static/img/icons/c04d.png" alt="weather-icon__future"
+                            alt="iconWeather">
                     </div>
                 </div>
             </div>
@@ -63,4 +79,5 @@
         </div>
     </div>
 </body>
+
 </html>

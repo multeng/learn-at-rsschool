@@ -37,7 +37,7 @@ export default class AppModel {
 
         return fetch(url)
             .then(res => res.json())
-            .then(res => res.links.download);
+            .then(res => res.urls.regular);
     }
 
 }

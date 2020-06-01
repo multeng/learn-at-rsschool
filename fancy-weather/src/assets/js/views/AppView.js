@@ -1,7 +1,7 @@
 export default class AppView {
-    constructor(city, weather, image, coordinates) {
+    constructor(city, weatherData, image, coordinates) {
         this.city = city;
-        this.weather = weather;
+        this.weather = weatherData;
         this.image = image;
         this.coordinates = coordinates;
     }
