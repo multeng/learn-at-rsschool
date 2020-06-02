@@ -29,6 +29,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.10.1"
+    "@babel/runtime": "^7.10.1",
+    "mapbox-gl": "^1.10.1"
   }
 }

@@ -1,5 +1,5 @@
 import AppModel from '../models/AppModel';
-// import AppView from '../views/AppView';
+import AppView from '../views/AppView';
 
 
 export default class App {
@@ -30,7 +30,7 @@ export default class App {
         console.log(weather);
         console.log(coordinates);
 
-        // const view = new AppView(city, weather, image, coordinates);
-        // view.renderOnLoad();
+        const view = new AppView(city, weather, image, coordinates);
+        view.renderOnLoad(coordinates);
     }
 }

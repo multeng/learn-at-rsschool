@@ -1,0 +1,14 @@
+.map-container{
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+.map-container__content {
+    margin: 40 auto;
+    width: 90%;
+    height: 87%;
+    max-height: 572px;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+}
