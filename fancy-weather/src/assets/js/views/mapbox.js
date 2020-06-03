@@ -4,6 +4,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibXVsdGVuZyIsImEiOiJja2F0bzVoNnYwODFmMnlwZ21vd
 export default function createMap(coordinates) {
     const { lat, lng } = coordinates;
 
+    // eslint-disable-next-line no-unused-vars
     const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/dark-v10',
@@ -11,7 +12,6 @@ export default function createMap(coordinates) {
         zoom: 10,
         pitch: 30
     });
-    console.log(map);
 
     // const maker = new mapboxgl.Maker()
     //     .setLngLat([lng, lat])

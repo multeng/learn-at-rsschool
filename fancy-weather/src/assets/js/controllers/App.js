@@ -14,7 +14,7 @@ export default class App {
             url: `https://api.unsplash.com/photos/random?orientation=landscape&per_page=1&query=nature&client_id=${imagesAccessKey}`
         }
         this.coordinatesApi = {
-            url: `https://api.opencagedata.com/geocode/v1/json?q=city&key=${geocodingApiKey}&pretty=1&no_annotations=1`
+            url: `https://api.opencagedata.com/geocode/v1/json?q=city&key=${geocodingApiKey}`
         }
     }
 
@@ -22,15 +22,27 @@ export default class App {
     async start() {
         const model = new AppModel(this.geoLocation, this.weatherApi, this.imagesApi, this.coordinatesApi);
         const city = await model.getLocations();
-        const coordinates = await model.getCoordinates(city);
-        const weather = await model.getWeather(coordinates);
+        const fullCoordinates = await model.getCoordinates(city);
+        const { annotations, formatted, geometry } = fullCoordinates;
+        const weather = await model.getWeather(geometry);
         const image = await model.getImage();
-        console.log(city);
-        console.log(image);
-        console.log(weather);
-        console.log(coordinates);
+        // console.log(fullCoordinates);
+        // console.log(annotations);
+        // console.log(formatted);
+        // console.log(weather);
 
-        const view = new AppView(city, weather, image, coordinates);
-        view.renderOnLoad(coordinates);
+
+        const view = new AppView(formatted, weather, image, geometry, annotations);
+        view.renderOnLoad();
+    }
+
+    async reload(newCity){
+        const model = new AppModel(this.geoLocation, this.weatherApi, this.imagesApi, this.coordinatesApi);
+        const fullCoordinates = await model.getCoordinates(newCity);
+        const { annotations, formatted, geometry } = fullCoordinates;
+        const weather = await model.getWeather(geometry);
+        const image = await model.getImage();
+        const view = new AppView(formatted, weather, image, geometry, annotations);
+        view.renderOnLoad();
     }
 }

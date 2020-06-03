@@ -6,34 +6,41 @@
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   margin: 5px;
+  @media only screen and (max-width: 1024px) {
+    width: 100%;
+  }
 }
-.search-input{
-    width: 80%;
-    height: 44px;
-    padding: 0 0 0 15px;
-    color: #fff;
-    background: rgba(76,82,85,.4);
-    border: 1px solid #fff;
-    border-right-width: 0;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    margin-left: 15px;
+.search-input {
+  width: 80%;
+  height: 44px;
+  padding: 0 0 0 15px;
+  color: #fff;
+  background: rgba(76, 82, 85, 0.4);
+  border: 1px solid #fff;
+  border-right-width: 0;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  margin-left: 15px;
+  @media only screen and (max-width: 1024px) {
+    width: 87%;
+  }
 }
-.search-input::placeholder{
-    color: white;
+.search-input::placeholder {
+  color: white;
 }
-.search-button{
-    width: 101px;
-    height: 44px;
-    background: grey;
-    border: 1px solid #fff;
-    border-left-width: 0;
-    border-radius: 0 5px 5px 0;
-    margin-right: 15px;
-    color: white;
-    font-size: 1.1rem;
+.search-button {
+  width: 101px;
+  height: 44px;
+  background: grey;
+  border: 1px solid #fff;
+  border-left-width: 0;
+  border-radius: 0 5px 5px 0;
+  margin-right: 15px;
+  color: white;
+  font-size: 1.1rem;
 }
-.search-button:hover{
-    background-color: orange;
-    cursor: pointer;
+.search-button:hover {
+  background-color: orange;
+  cursor: pointer;
+  transition: ease-in-out 0.7s;
 }

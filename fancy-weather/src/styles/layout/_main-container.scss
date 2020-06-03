@@ -2,7 +2,10 @@
   max-width: 1440px;
   display: flex;
   margin: auto;
-  height: 85vh;
+  box-sizing: border-box;
+  @media only screen and (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
 }
 .weather-container {
   display: flex;
@@ -10,13 +13,11 @@
   width: 100%;
   max-width: 60%;
   font-size: 1rem;
+  @media only screen and (max-width: 1024px) {
+    max-width: 100%;
+  }
 }
-.map-container {
-  display: flex;
-  width: 100%;
-  max-width: 40%;
-  height: 85vh;
-}
+
 .weather-today {
   display: grid;
 }
@@ -37,18 +38,25 @@
 .weather-today__info {
   display: grid;
   align-items: center;
+  height: 462px;
   grid-template-areas:
     "temp icon"
     "temp info";
   grid-template-columns: 2fr 1fr;
   justify-items: center;
   text-transform: uppercase;
+  @media only screen and (max-width: 1176px) {
+    height: 425px;
+  }
 }
 
 .weather-today__temperature {
   font-weight: 400;
-  font-size: 9em;
+  font-size: 8.5rem;
   grid-area: temp;
+  @media only screen and (max-width: 425px) {
+    font-size: 4rem;
+  }
 }
 .weather-today__icon {
   width: 80%;
@@ -57,23 +65,40 @@
 .weather-today__additional-info {
   font-size: 1.5rem;
   grid-area: info;
+  @media only screen and (max-width: 425px) {
+    font-size: 1.2rem;
+  }
 }
 
 .weather-in-future {
   display: flex;
   justify-content: space-around;
   margin: 5px;
-  padding: 20px;
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.5);
+  @media only screen and (max-width: 425px) {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }
 .day-block {
   display: flex;
   flex-wrap: wrap;
   width: 33%;
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: #fff;
   text-transform: uppercase;
+  @media only screen and (max-width: 425px) {
+    width: 94%;
+    justify-content: space-around;
+    margin: 5px;
+  }
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.day-block img {
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
 }
 .day {
   width: 100%;
@@ -81,5 +106,6 @@
   text-align: center;
 }
 .day-temperature {
-  font-size: 3rem;
+  margin: 20px 0px 0px 30px;
+  font-size: 2rem;
 }

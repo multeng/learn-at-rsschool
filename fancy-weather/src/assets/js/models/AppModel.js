@@ -11,7 +11,8 @@ export default class AppModel {
 
         return fetch(url)
             .then(res => res.json())
-            .then(res => res.city);
+            .then(res => res.city)
+            .catch(console.log('Не улалось получить координаты'));
     }
 
     async getCoordinates(currentCity) {
@@ -19,7 +20,8 @@ export default class AppModel {
         url = url.replace(/city/, currentCity);
         return fetch(url)
             .then(res => res.json())
-            .then(res => res.results[0].geometry);
+            .then(res => res.results[0])
+            .catch(console.log('Не улалось получить координаты'));
     }
 
     async getWeather(coordinates) {
@@ -29,7 +31,8 @@ export default class AppModel {
         url = url.replace(/longitude/, lng);
         return fetch(url)
             .then(res => res.json())
-            .then(res => res);
+            .then(res => res)
+            .catch(console.log('Не улалось получить данные погоды'));
     }
 
     async getImage() {
@@ -37,7 +40,8 @@ export default class AppModel {
 
         return fetch(url)
             .then(res => res.json())
-            .then(res => res.urls.regular);
+            .then(res => res.urls.regular)
+            .catch(console.log('Не улалось получить изображение'));
     }
 
 }

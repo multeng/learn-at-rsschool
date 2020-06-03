@@ -3,12 +3,19 @@
   max-width: 1440px;
   margin: auto;
   height: 80px;
+  @media only screen and (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
 }
 .settings {
-  width: 60%;
-  background-color: hotpink;
+  width: calc(59% - 3px);
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 5px;
+  border-radius: 5px;
+  @media only screen and (max-width: 1024px) {
+    width: 100%;
+  }
 }
 .search {
-  width: 40%;
-  background-color: greenyellow;
+  width: 40%; 
 }
