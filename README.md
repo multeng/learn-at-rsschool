@@ -24,7 +24,7 @@
 
 ## React Курс
 
-### 1. [Songbird](https://app.netlify.com/sites/multeng-songbird/overview)
+### 1. [Songbird](https://multeng-songbird.netlify.app/)
 Описание: Задание выполнено на React, но скорее неправильно из-за того что тут я использовал так называемые props drill, сейчас уже могу сделать в Legacy или же с помощью хуков.
 
 
