@@ -5,7 +5,7 @@
 Описание: Самое первое задание, учились верстать. Использовали flex-box или grind, так же "прилипающий" header. Знакомство с DOM, слайдер на Vanilla JS. Шафл картинок и работа с формой.
 
 ### 2. [Virtual keyboard](https://multeng.github.io/virtual-keyboard/)
-Описание: Учились генерировать DOM с помощью JS. Работа с событями "keyup, keydown, mouseup, mousedown". Так же учились работать с localstorage. Сделано немного неправильно из-за того что не использовал preventDefault.
+Описание: Учились генерировать DOM с помощью JS. Работа с событями "keyup, keydown, mouseup, mousedown". Делегирование событий. Так же учились работать с localstorage. Сделано немного неправильно из-за того что не использовал preventDefault.
 
 ### 3. [English for kids](https://multeng-english-for-kids.netlify.app/)
 Описание: Продолжали работать с DOM, учились работать с "состоянием" сайта(Тренировка\Игра). Учились работать с обработчиком событий "mouseover\mouseout". Работа со звуковыми файлами. Выполнен так же на Vanilla JS. Первое подключение Webpack.
